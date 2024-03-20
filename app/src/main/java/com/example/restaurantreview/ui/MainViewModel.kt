@@ -59,7 +59,7 @@ class MainViewModel : ViewModel() {
 
     fun postReview(review: String) {
         _isLoading.value = true
-        val client = ApiConfig.getApiService().postReview(RESTAURANT_ID, "Dicoding", review)
+        val client = ApiConfig.getApiService().postReview(RESTAURANT_ID, "RakaiTambora", review)
         client.enqueue(object : Callback<PostReviewResponse> {
             override fun onResponse(call: Call<PostReviewResponse>, response: Response<PostReviewResponse>) {
                 _isLoading.value = false
